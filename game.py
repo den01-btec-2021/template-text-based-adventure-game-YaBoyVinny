@@ -1,3 +1,6 @@
+from posixpath import normpath
+
+
 def main():
 
     while True:
@@ -57,7 +60,7 @@ def main():
                 else:
                     print("incorrect")
                     life_counter -= 1
-                    print("you have lost a life, you now have {life_counter} remaining") 
+                    print(f"you have lost a life, you now have {life_counter} remaining") 
             
             elif player_Direction == "West":
                 print("you went West")
@@ -79,5 +82,6 @@ def main():
             if life_counter == 0:
                 print("you have died, try again") 
                 break
+        exit()
             
 main()
